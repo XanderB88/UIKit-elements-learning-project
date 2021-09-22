@@ -32,22 +32,49 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0QI-0R-fme"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0yM-Vn-S7D">
+                                <rect key="frame" x="59" y="168" width="297" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="chosenSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="gP8-9j-cpo"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCR-GV-1uI">
+                                <rect key="frame" x="59" y="250" width="291" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="B9N-PZ-G0P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hnt-cW-dsx" secondAttribute="bottom" constant="753" id="5IK-K4-E4i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fy6-FS-wa1" secondAttribute="bottom" constant="749" id="6dE-Np-ClE"/>
+                            <constraint firstItem="0yM-Vn-S7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="GCX-el-d8J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0yM-Vn-S7D" secondAttribute="trailing" constant="58" id="KMt-BI-YaE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fy6-FS-wa1" secondAttribute="trailing" constant="80" id="NFZ-0f-M8K"/>
                             <constraint firstItem="hnt-cW-dsx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Ro5-6v-nSa"/>
                             <constraint firstItem="Fy6-FS-wa1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="Umw-f6-GCc"/>
+                            <constraint firstItem="mCR-GV-1uI" firstAttribute="top" secondItem="0yM-Vn-S7D" secondAttribute="bottom" constant="51" id="Wpj-Cy-yXQ"/>
                             <constraint firstItem="Fy6-FS-wa1" firstAttribute="leading" secondItem="hnt-cW-dsx" secondAttribute="trailing" constant="102" id="f5t-6I-BVq"/>
                             <constraint firstItem="hnt-cW-dsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="s4x-v3-bBt"/>
                             <constraint firstItem="Fy6-FS-wa1" firstAttribute="leading" secondItem="hnt-cW-dsx" secondAttribute="trailing" constant="102" id="va3-7j-bR3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mCR-GV-1uI" secondAttribute="trailing" constant="64" id="vaM-ck-2OC"/>
+                            <constraint firstItem="mCR-GV-1uI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="xZB-mA-DeW"/>
+                            <constraint firstItem="0yM-Vn-S7D" firstAttribute="top" secondItem="hnt-cW-dsx" secondAttribute="bottom" constant="59" id="zHx-tj-pXO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonLabel" destination="Fy6-FS-wa1" id="ewY-7K-ANK"/>
+                        <outlet property="segmentLabel" destination="mCR-GV-1uI" id="paP-mq-A8G"/>
+                        <outlet property="segmentedControl" destination="0yM-Vn-S7D" id="vuZ-C5-3tE"/>
                         <outlet property="textLabel" destination="hnt-cW-dsx" id="IrL-MC-Pad"/>
                     </connections>
                 </viewController>
@@ -57,8 +84,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

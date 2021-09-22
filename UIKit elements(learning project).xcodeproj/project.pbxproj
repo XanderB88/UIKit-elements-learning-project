@@ -37,6 +37,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11A2A80126FBF2410075CDD4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				11A4C9DF26F9650800543908 /* AppDelegate.swift */,
+				11A4C9E126F9650800543908 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		11A4C9D326F9650800543908 = {
 			isa = PBXGroup;
 			children = (
@@ -56,8 +65,7 @@
 		11A4C9DE26F9650800543908 /* UIKit elements(learning project) */ = {
 			isa = PBXGroup;
 			children = (
-				11A4C9DF26F9650800543908 /* AppDelegate.swift */,
-				11A4C9E126F9650800543908 /* SceneDelegate.swift */,
+				11A2A80126FBF2410075CDD4 /* Core */,
 				11A4C9E326F9650800543908 /* ViewController.swift */,
 				11A4C9E526F9650800543908 /* Main.storyboard */,
 				11A4C9E826F9650900543908 /* Assets.xcassets */,
