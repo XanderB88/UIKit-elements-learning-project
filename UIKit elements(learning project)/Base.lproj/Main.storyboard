@@ -43,7 +43,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCR-GV-1uI">
-                                <rect key="frame" x="59" y="250" width="291" height="59"/>
+                                <rect key="frame" x="59" y="216" width="291" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="B9N-PZ-G0P"/>
                                 </constraints>
@@ -51,18 +51,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="iBX-cm-SnY">
+                                <rect key="frame" x="64" y="283" width="294" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MJw-Qv-WZx"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAcion:" destination="BYZ-38-t0r" eventType="valueChanged" id="pod-hI-M7X"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hnt-cW-dsx" secondAttribute="bottom" constant="753" id="5IK-K4-E4i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fy6-FS-wa1" secondAttribute="bottom" constant="749" id="6dE-Np-ClE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iBX-cm-SnY" secondAttribute="trailing" constant="58" id="CF7-ex-Ngx"/>
                             <constraint firstItem="0yM-Vn-S7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="GCX-el-d8J"/>
+                            <constraint firstItem="mCR-GV-1uI" firstAttribute="top" secondItem="0yM-Vn-S7D" secondAttribute="bottom" constant="17" id="GYP-CO-wqd"/>
+                            <constraint firstItem="iBX-cm-SnY" firstAttribute="top" secondItem="mCR-GV-1uI" secondAttribute="bottom" constant="8" symbolic="YES" id="IZ3-29-QAB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0yM-Vn-S7D" secondAttribute="trailing" constant="58" id="KMt-BI-YaE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fy6-FS-wa1" secondAttribute="trailing" constant="80" id="NFZ-0f-M8K"/>
                             <constraint firstItem="hnt-cW-dsx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Ro5-6v-nSa"/>
                             <constraint firstItem="Fy6-FS-wa1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="Umw-f6-GCc"/>
-                            <constraint firstItem="mCR-GV-1uI" firstAttribute="top" secondItem="0yM-Vn-S7D" secondAttribute="bottom" constant="51" id="Wpj-Cy-yXQ"/>
+                            <constraint firstItem="iBX-cm-SnY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="YLj-r4-xAd"/>
                             <constraint firstItem="Fy6-FS-wa1" firstAttribute="leading" secondItem="hnt-cW-dsx" secondAttribute="trailing" constant="102" id="f5t-6I-BVq"/>
                             <constraint firstItem="hnt-cW-dsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="s4x-v3-bBt"/>
                             <constraint firstItem="Fy6-FS-wa1" firstAttribute="leading" secondItem="hnt-cW-dsx" secondAttribute="trailing" constant="102" id="va3-7j-bR3"/>
@@ -75,6 +87,7 @@
                         <outlet property="buttonLabel" destination="Fy6-FS-wa1" id="ewY-7K-ANK"/>
                         <outlet property="segmentLabel" destination="mCR-GV-1uI" id="paP-mq-A8G"/>
                         <outlet property="segmentedControl" destination="0yM-Vn-S7D" id="vuZ-C5-3tE"/>
+                        <outlet property="slider" destination="iBX-cm-SnY" id="9KC-Pm-GfI"/>
                         <outlet property="textLabel" destination="hnt-cW-dsx" id="IrL-MC-Pad"/>
                     </connections>
                 </viewController>

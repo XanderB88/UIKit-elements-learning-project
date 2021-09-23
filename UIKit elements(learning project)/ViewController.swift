@@ -15,29 +15,42 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var segmentLabel: UILabel!
     
+    @IBOutlet weak var slider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Label
+        //       Label
         textLabel.isHidden = true
         textLabel.font = textLabel.font.withSize(14)
         textLabel.textColor = .white
-        //Button
+        //       Button
         buttonLabel.setTitle("Show label", for: .normal)
         buttonLabel.setTitleColor(.white, for: .normal)
         buttonLabel.backgroundColor = .black
         buttonLabel.layer.cornerRadius = 5
         
-//        segmentLabel
-        segmentLabel.text = "First segment is selected"
+        //        Label for segmented control and slider
+        slider.value = 1
+        segmentLabel.text = String(slider.value)
         segmentLabel.textColor = .red
-        segmentLabel.font = segmentLabel.font.withSize(14)
+        segmentLabel.font = segmentLabel.font.withSize(18)
         segmentLabel.textAlignment = .center
         segmentLabel.numberOfLines = 2
         
-//        segmented control
+        //        Segmented control
         segmentedControl.insertSegment(withTitle: "Third", at: 2, animated: true)
+        
+//        Slider
+        
+        slider.minimumValue = 0
+        slider.maximumValue = 1
+        slider.minimumTrackTintColor = .green
+        slider.maximumTrackTintColor = .red
+        slider.thumbTintColor = .yellow
+        slider.minimumValueImage = UIImage(systemName: "seal")
+        slider.maximumValueImage = UIImage(systemName: "seal.fill")
     }
-    //Actions for button
+    //    Actions for button
     @IBAction func buttonPressed(_ sender: UIButton) {
         
         if textLabel.isHidden {
@@ -55,7 +68,7 @@ class ViewController: UIViewController {
         }
     }
     
-//    Actions for segmented control
+    //    Actions for segmented control
     @IBAction func chosenSegment(_ sender: UISegmentedControl) {
         
         switch segmentedControl.selectedSegmentIndex {
@@ -72,6 +85,15 @@ class ViewController: UIViewController {
                 print("Something went wrong")
         }
         
+    }
+    
+    
+    @IBAction func sliderAcion(_ sender: UISlider) {
+        segmentLabel.text = String(sender.value)
+        
+        let backgroundColor = self.view.backgroundColor
+        
+        self.view.backgroundColor = backgroundColor?.withAlphaComponent(CGFloat(sender.value))
     }
 }
 
