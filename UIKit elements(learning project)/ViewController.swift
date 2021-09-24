@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //       Label
@@ -40,8 +42,7 @@ class ViewController: UIViewController {
         //        Segmented control
         segmentedControl.insertSegment(withTitle: "Third", at: 2, animated: true)
         
-//        Slider
-        
+        //        Slider
         slider.minimumValue = 0
         slider.maximumValue = 1
         slider.minimumTrackTintColor = .green
@@ -49,6 +50,11 @@ class ViewController: UIViewController {
         slider.thumbTintColor = .yellow
         slider.minimumValueImage = UIImage(systemName: "seal")
         slider.maximumValueImage = UIImage(systemName: "seal.fill")
+        
+//        TextField
+        textField.placeholder = "Type your name"
+        textField.clearButtonMode = .whileEditing
+        
     }
     //    Actions for button
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -94,6 +100,25 @@ class ViewController: UIViewController {
         let backgroundColor = self.view.backgroundColor
         
         self.view.backgroundColor = backgroundColor?.withAlphaComponent(CGFloat(sender.value))
+    }
+    
+    
+  
+    @IBAction func buttonTextFPressed(_ sender: UIButton) {
+        
+        guard textField.text?.isEmpty == false else { return }
+       
+        if let _ = Double(textField.text!) {
+            
+            let alert = UIAlertController(title: "Wrong format", message: "Please enter text", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        } else {
+            segmentLabel.text = textField.text
+            textField.text = ""
+        }
     }
 }
 
