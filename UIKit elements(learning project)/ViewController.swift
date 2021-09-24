@@ -120,5 +120,17 @@ class ViewController: UIViewController {
             textField.text = ""
         }
     }
+    
+    @IBAction func changedPicker(_ sender: UIDatePicker) {
+        
+        let dateFormater = DateFormatter()
+        
+        dateFormater.dateStyle = .full
+        let dateValue = dateFormater.string(from: sender.date)
+        
+        segmentLabel.text = dateValue
+        segmentLabel.textColor = .black
+    }
+    
 }
 
